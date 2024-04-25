@@ -1,0 +1,69 @@
+.folder-section{
+    width: 100%;
+    height: auto;
+    padding: 1%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.folder-section .add-img{
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px #0005;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #111;
+}
+
+.folder-section .image{
+    width: 180px;
+    height: 180px;
+    border-radius: 5px;
+    box-shadow: 2px 5px 10px #0005;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    color: #111;
+    overflow: hidden;
+}
+
+.folder-section .image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.image-input{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    opacity: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+}
+.upload-img-btn{
+    display: flex;
+    width: 100%;
+    padding: 0 20px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    border: none;
+    background-color: #111;
+    color: #fff;
+    position: absolute;
+    top: 105%;
+    left: 0;
+    z-index: 3;
+}

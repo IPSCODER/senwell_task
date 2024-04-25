@@ -1,0 +1,16 @@
+.sidebar{
+    width: 15%;
+    height: 100vh;
+    border: 2px solid #000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+    transition: 0.3s linear;
+    background-color: #111;
+}
+
+.sidebar.open{
+    transform: translateX(0);
+}

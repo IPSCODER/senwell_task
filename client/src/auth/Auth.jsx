@@ -32,7 +32,7 @@ const Auth = () => {
 				return;
 			  }else{
                 try{
-                  await axios.post("http://localhost:5000/users/signUp",{body:userState}).then((resp)=>{
+                  await axios.post("https://senwell-task.onrender.com/users/signUp",{body:userState}).then((resp)=>{
                     alert(resp.data)
                     setRegister(true)
                   })
@@ -57,7 +57,7 @@ const Auth = () => {
             return;
           }else{
             try{
-              await axios.post("http://localhost:5000/users/signIn",{body:userState}).then((resp)=>{
+              await axios.post("https://senwell-task.onrender.com/users/signIn",{body:userState}).then((resp)=>{
                 if (resp.data == "available") {
                   localStorage.setItem("email",userState.email)
                   alert("succesfully login")

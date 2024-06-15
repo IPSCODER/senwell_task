@@ -18,7 +18,7 @@ const Folder = () => {
     e.preventDefault();
     const formData = new FormData()
     formData.append("file",selectedFile)
-    await axios.put(`http://localhost:5000/upload/${localStorage.getItem("email")}/${id}`,formData)
+    await axios.put(`https://senwell-task.onrender.com/upload/${localStorage.getItem("email")}/${id}`,formData)
     .then((resp) => {
     if (resp.status == 200) {
       setSelectedFile(null)
@@ -29,7 +29,7 @@ const Folder = () => {
   };
 
   useEffect(()=>{
-    axios.post("http://localhost:5000/getImages",{useremail:localStorage.getItem("email"),foldername:id})
+    axios.post("https://senwell-task.onrender.com/getImages",{useremail:localStorage.getItem("email"),foldername:id})
     .then((resp) => setImages(resp.data))
     .catch((err) => console.log(err))
   },[selectedFile])
@@ -47,8 +47,8 @@ const Folder = () => {
       </form>
 </div>
 {images?.map((i) =>(
-  <div className='image' onClick={() =>{navigate("/image",{state:`http://localhost:5000/images/${i.path}`})}} key={i._id} >
-    <img src={`http://localhost:5000/images/${i.path}`} alt="" />
+  <div className='image' onClick={() =>{navigate("/image",{state:`https://senwell-task.onrender.com/images/${i.path}`})}} key={i._id} >
+    <img src={`https://senwell-task.onrender.com/images/${i.path}`} alt="" />
   </div>
 ))}
 

@@ -14,7 +14,7 @@ const Home = () => {
   const getFolders = async () => {
     try {
       await axios
-        .post("http://localhost:5000/folders/allFolders", {
+        .post("https://senwell-task.onrender.com/folders/allFolders", {
           body: { email: localStorage.getItem("email") },
         })
         .then((resp) => {
@@ -48,7 +48,7 @@ const Home = () => {
     } else {
       try {
         await axios
-          .post("http://localhost:5000/folders/createFolders", {
+          .post("https://senwell-task.onrender.com/folders/createFolders", {
             body: {
               email: localStorage.getItem("email"),
               foldername: folderName,
@@ -66,7 +66,7 @@ const Home = () => {
 
   const folderDelete = async (foldername) => {
     try {
-      await axios.post("http://localhost:5000/folders/deleteFolder", {
+      await axios.post("https://senwell-task.onrender.com/folders/deleteFolder", {
         useremail: localStorage.getItem("email"),
         foldername: foldername,
       }).then((resp) =>{
